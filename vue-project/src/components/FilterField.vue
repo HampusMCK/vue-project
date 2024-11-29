@@ -1,18 +1,13 @@
 <script setup>
     import { ref } from 'vue';
+    import { orderList } from './NewListings.vue';
 </script>
 
 <script>
     export const minPrice = ref(1)
     export const maxPrice = ref(1)
 
-    const orderName = ref(false)
-    const orderPrice = ref(false)
-    const orderLatest = ref(false)
-
-    export const orderOption = ref(0)
-
-    
+    export const orderPrice = ref(false)
 </script>
 
 <template>
@@ -28,11 +23,7 @@
         </div>
         <div class="order">
             <h3>Sort after price:</h3>
-            <input v-model="orderPrice" type="checkbox" @click="orderName = false, orderLatest = false, orderOption = 1">
-            <h3>Sort after name:</h3>
-            <input v-model="orderName" type="checkbox" @click="orderPrice = false, orderLatest = false, orderOption = 2">
-            <h3>Sort after latest:</h3>
-            <input v-model="orderLatest" type="checkbox" @click="orderName = false, orderPrice = false, orderOption = 3">
+            <input v-model="orderPrice" type="checkbox" @click="orderList()">
         </div>
     </div>
     </div>

@@ -1,7 +1,7 @@
 <script setup>
 import { list } from './NewListings.vue';
 import { computed, ref } from 'vue';
-import { minPrice, orderOption } from './FilterField.vue';
+import { minPrice } from './FilterField.vue';
 </script>
 
 <script>
