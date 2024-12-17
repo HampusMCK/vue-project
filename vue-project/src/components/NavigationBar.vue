@@ -23,7 +23,7 @@
 <template>
 <div class="container">
     <div class="logo">
-        <img src="./icons/Neighbour.png" alt="Website Logo" width="90px">
+        <a href=""><img src="./icons/Neighbour.png" alt="Website Logo" width="90px"></a>
     </div>
     <div class="searchbar">
         <h1 class="orgName">Neighbour Help</h1>
@@ -32,7 +32,7 @@
             <button class="searchbtn">&#128269; Search!</button>
         </form>
     </div>
-    <div class="menu" :class="{ active: isBarActive}" @click="activateMenu">   
+    <div class="menu" :class="{ active: isBarActive}" @click="activateMenu">
         <span class="bar"></span>
         <span class="bar"></span>
         <span class="bar"></span>
@@ -83,9 +83,9 @@
 
     .menu .bar{
         display: block;
-        width: 12%;
-        height: 10%;
-        margin: 2% auto;
+        width: 40px;
+        height: 7px;
+        margin: 7px auto;
         background-color: black;
         -webkit-transition: all 0.3s ease-in-out;
         transition: all 0.3s ease-in-out;
@@ -95,10 +95,10 @@
         opacity: 0;
     }
     .menu.active .bar:nth-child(1) {
-        transform: translateY(13px) rotate(45deg);
+        transform: translateY(14px) rotate(45deg);
     }
     .menu.active .bar:nth-child(3) {
-        transform: translateY(-13px) rotate(-45deg);
+        transform: translateY(-14px) rotate(-45deg);
     }
 
     .dropdownMenu {
